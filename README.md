@@ -4,6 +4,11 @@
 > Currently, this web application is fully optimized for **PC/Desktop only**.  
 > Mobile responsiveness is not yet implemented, but it will be added soon.  
 
+SavvySpices AI is a modern **AI-powered recipe web application**.  
+It combines the power of **AI chat (SavvySpices AI)** and a **Recipe Gallery (SavvySpices Special)** to help users discover, cook, and enjoy dishes effortlessly.  
+
+The project also includes an **Admin Panel** for managing contact messages and feedback.  
+
 ---
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)  
@@ -14,13 +19,6 @@
 ![API](https://img.shields.io/badge/API-TheMealDB%20API-green)  
 ![Hosting](https://img.shields.io/badge/Hosting-Replit%20%7C%20Netlify-purple)  
 ![Made By](https://img.shields.io/badge/Made%20By-Sanket%20Padhyal-blue)  
-
----
-
-SavvySpices AI is a modern **AI-powered recipe web application**.  
-It combines the power of **AI chat (SavvySpices AI)** and a **Recipe Gallery (SavvySpices Special)** to help users discover, cook, and enjoy dishes effortlessly.  
-
-The project also includes an **Admin Panel** for managing contact messages and feedback.  
 
 ---
 
