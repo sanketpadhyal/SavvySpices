@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="assets/rice.png"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SavvySpices | SavvySpices AI</title>
+  <link rel="stylesheet" href="style/ai-food.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      overflow-x: hidden; 
+    }
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      background: url("assets/bg.png") no-repeat center center/cover;
+      min-height: 100vh;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: pageLoad 0.8s ease-out forwards;
+    }
+ </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      SavvySpices
+      <img src="assets/male-cook.png" alt="Chef Icon" class="chef-icon">
+    </a>
+    <div class="nav-ice">
+      <nav>
+        <a href="index.html"> Home </a>
+        <a href="about.html"> About</a>
+        <a href="admin-contact.html">Contact</a>
+      </nav>
+    </div>
+    <button class="note-btn" id="noteBtn" aria-expanded="false"><strong><i> NO LOGIN REQUIRED </i></strong></button>
+  </header>
+
+  <main class="chat-container">
+    <!-- Left: intro -->
+    <div class="chat-info">
+      <h1 class="chat-title">
+        <img src="assets/rice.png" alt="support" style="width:1.5em; vertical-align:middle;"><strong>
+        SavvySpices AI ...</strong><br> ➤ <i><span class="yellow-highlight">Your Cooking Buddy</span></i>
+      </h1><hr>
+      <p class="chat-subtitle"><i>Tell me what ingredients you have, and I'll suggest a tasty dish! ...</i></p>
+      <img src="assets/point_right.png" 
+     alt="support" 
+     class="point-right"><hr>
+    </div>
+
+    <!-- Right chat -->
+    <div class="chat-section">
+      <!-- Chat Window -->
+      <div class="chat-box" id="chatBox">
+        <div class="message ai-msg">
+          <img src="assets/male-cook.png" alt="support" style="width:1.5em; vertical-align:middle;"> 
+          <strong>SavvySpices AI:</strong> Hello foodie! Welcome to SavvySpices AI!
+        </div>
+      </div>
+
+      <!-- Input Area -->
+      <form class="chat-input-area" id="chatForm">
+        <input type="text" id="userInput" placeholder="Type Here ..." required />
+        <button type="submit" class="send-btn"><strong>SEND</strong> <img src="assets/spoon.png" alt="support" style="width:1.5em; vertical-align:middle;"></button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    // scroll reset
+    window.history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  </script>
+  <script src="script/main.js"></script>
+</body>
+</html>

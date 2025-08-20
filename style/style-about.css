@@ -1,0 +1,444 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  background: url("assets/bg.png") no-repeat center center/cover;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: relative; 
+  z-index: 10;
+}
+
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+/* Frosted capsule for the whole nav */
+.nav-ice {
+  display: flex; 
+  align-items: center;
+  padding: 10px 18px;
+  gap: 18px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  flex-shrink: 0; 
+}
+
+.nav-ice:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.24), inset 0 1px 0 rgba(255,255,255,0.35);
+}
+
+/* Layout inside  */
+.nav-ice nav {
+  display: flex;
+  gap: 22px;
+  flex-shrink: 0;
+}
+
+/* Nav links */
+.nav-ice nav a {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.3px;
+  padding: 5px 0;
+  margin: 0 12px;
+  border-radius: 8px;
+  transition: color 0.3s ease;
+}
+
+.nav-ice nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ffffff, #ffffffb4, #ffffff4c);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-ice nav a:hover {
+  color: #ededed;
+}
+
+.nav-ice nav a:hover::after {
+  width: 100%;
+}
+
+/* Header Buttons */
+header .note-btn, header .sign-in {
+  margin-left: 20px; 
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.25s ease;
+}
+
+header .note-btn:hover, header .sign-in:hover {
+  background: rgba(255,255,255,0.25);
+  transform: scale(1.05);
+}
+
+/* Logo */
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 14px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;  
+  color: inherit;         
+  cursor: pointer;        
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 111, 97, 0.3);
+}
+
+.chef-icon {
+  width: 30px;  
+  height: 30px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.support-body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+}
+
+.support-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.support-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ffffff, #fffffffc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.faq-section {
+  margin-bottom: 50px;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.support-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.support-form input,
+.support-form textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.support-form input::placeholder,
+.support-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.support-form button.primary {
+  align-self: flex-start;
+}
+
+/* Divider */
+hr {
+  border: none;
+  height: 2px;
+  width: 100%; 
+  max-width: 100%; 
+  background: linear-gradient(to right, transparent, #ffffff, transparent);
+  margin: 60px 0;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1px; 
+  transform: translateX(-8px); 
+  transition: transform 0.3s ease; 
+}
+
+
+/* Cute compact input styling */
+#name {
+  width: 180px; 
+  padding: 8px 16px;
+  border-radius: 20px; 
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 182, 193, 0.25); 
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* On focus slightly bigger and glowing */
+#name:focus {
+  width: 220px; 
+  padding: 9px 18px;
+  border-color: #ff91a4;
+  background: rgba(255, 182, 193, 0.35);
+  box-shadow: 0 4px 12px rgba(255, 145, 164, 0.4);
+}
+
+/* Placeholder styling */
+#name::placeholder {
+  color: #ffe6f0; 
+  font-style: italic;
+  opacity: 1;
+}
+
+.email-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1px; 
+  transform: translateX(-8px); 
+  transition: transform 0.3s ease; 
+}
+
+/* Slightly bigger by default */
+#email {
+  width: 350px; 
+  padding: 9px 18px;
+  border-radius: 20px; 
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: rgba(135, 206, 235, 0.25); 
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Expand and glow on focus */
+#email:focus {
+  width: 400px; 
+  padding: 10px 20px;
+  border-color: #87ceeb;
+  background: rgba(135, 206, 235, 0.35);
+  box-shadow: 0 4px 12px rgba(135, 206, 235, 0.4);
+}
+
+/* Placeholder styling */
+#email::placeholder {
+  color: #e0f7ff; 
+  font-style: italic;
+  opacity: 1;
+}
+
+.message-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1px;
+  transform: translateX(-8px); 
+  transition: transform 0.3s ease;
+}
+
+/* Cute compact textarea styling */
+#message {
+  width: 400px; 
+  max-width: 100%;
+  padding: 10px 16px;
+  border-radius: 20px; 
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: rgba(135, 206, 235, 0.25); 
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: left;
+  outline: none;
+  resize: none; 
+  transition: all 0.3s ease, background 0.3s ease;
+}
+
+/* On focus slightly bigger and glowing */
+#message:focus {
+  width: 500px; 
+  padding: 12px 18px;
+  border-color: #87ceeb;
+  background: rgba(135, 206, 235, 0.35);
+  box-shadow: 0 4px 12px rgba(135, 206, 235, 0.4);
+}
+
+/* Placeholder styling */
+#message::placeholder {
+  color: #e0f7ff; 
+  font-style: italic;
+  opacity: 1;
+}
+
+/* Center submit button with the textarea */
+.submit-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px; 
+}
+
+/* Cute button style */
+.submit-wrapper .primary {
+  background: linear-gradient(135deg, #f5f5f5e4, #ef05b1a0); 
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 28px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.submit-wrapper .primary:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 182, 193, 0.5);
+  filter: brightness(1.1);
+}
+
+.submit-wrapper .primary:active {
+  transform: scale(0.97);
+}
+
+
+  /* Loader overlay */
+  #loaderOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  /* Spinner */
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255,255,255,0.2);
+    border-top: 8px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Alert box */
+  #responseMsg {
+    display: none;
+    margin-top: 15px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-left: 6px solid rgb(46, 0, 250);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    max-width: 400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 1.8s ease;
+  }
+  #responseMsg.show {
+    display: block;
+    opacity: 1;
+  }
+  #responseMsg.hide {
+    opacity: 0;
+    transition: all 1.8s ease;
+  }
+
+     /* Animation bottom-to-top fade */
+   @keyframes fadeUp {
+     0% { transform: translateY(40px); opacity: 0; }
+     100% { transform: translateY(0); opacity: 1; }
+   }
+
+   /* Apply animation to main sections */
+   .support-hero,
+   .faq-section,
+   .contact-section {
+     animation: fadeUp 0.8s ease forwards;
+   }
+
+   /* FAQ items */
+   .faq-item {
+     opacity: 0;
+     transform: translateY(40px);
+     animation: fadeUp 0.8s ease forwards;
+   }
+   .faq-item:nth-child(1) { animation-delay: 0.2s; }
+   .faq-item:nth-child(2) { animation-delay: 0.4s; }
+   .faq-item:nth-child(3) { animation-delay: 0.6s; }

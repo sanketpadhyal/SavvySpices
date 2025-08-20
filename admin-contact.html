@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+   <link rel="icon" type="image/png" href="assets/cat.png">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> SavvySpices | Contact </title>
+   <link rel="stylesheet" href="style/style-about.css">
+   <style>
+   * { margin:0; padding:0; box-sizing:border-box; }    
+   body {
+     font-family: Arial, sans-serif;
+     color: white;
+     background: url("assets/bg.png") no-repeat center center/cover;
+     min-height: 100vh;
+   }
+   </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      SavvySpices
+      <img src="assets/male-cook.png" alt="Chef Icon" class="chef-icon">
+    </a>
+    <div class="nav-ice">
+      <nav>
+        <a href="index.html"> Home </a>
+        <a href="about.html"> About</a>
+        <a href="admin-contact.html">Contact</a>
+      </nav>
+    </div>
+    <button class="note-btn" id="noteBtn" aria-expanded="false"><strong><i> NO LOGIN REQUIRED </i></strong></button>
+  </header>
+  <br><br>
+
+  <main class="support-body">
+    <!-- Hero Section -->
+    <section class="support-hero">
+      <h1><strong>How can we help you?</strong> <img src="assets/hugging_face (1).png" alt="support" style="width:1.5em; vertical-align:middle;"></h1>
+      <p><i>Find answers to common questions or reach out to our team directly.</i></p>
+    </section><br>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <h2 style="font-size: 2rem; font-weight: 800; display: inline-flex; align-items: center; gap: 10px;">
+        <em style="background: linear-gradient(135deg, #ffffff, #ffffff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 2px 2px 6px rgba(0,0,0,0.3);">
+          Frequently Asked Questions ...
+        </em>
+        <img src="assets/point_down.png" alt="support" style="width:1.5em; vertical-align:middle;">
+      </h2>
+      <br><br>
+      <div class="faq-item">
+        <h3><img src="assets/eyes (1).png" alt="support" style="width:1.5em; vertical-align:middle;"> Do I need to create an account?</h3>
+        <p>🢣 <i>No login required! You can access our features without signing up.</i></p>
+      </div>
+      <div class="faq-item">
+        <h3><img src="assets/eyes (1).png" alt="support" style="width:1.5em; vertical-align:middle;"> How do I report an issue?</h3>
+        <p>🢣 <i>
+          For issues related to SavvySpices, email us at 
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sanketpadhyal3@gmail.com&su=Issue%20Related%20to%20SavvySpices" 
+             target="_blank" style="text-decoration: none; color: #ffd700; font-weight: bold;">
+            sanketpadhyal3@gmail.com
+          </a>.
+        </i></p>
+      </div>
+      <div class="faq-item">
+        <h3><img src="assets/eyes (1).png" alt="support" style="width:1.5em; vertical-align:middle;"> Where can I find updates?</h3>
+        <p>🢣 <i>
+          Check our 
+          <a href="https://github.com/sanketpadhyal" style="text-decoration: none; color: #99ff00; font-weight: bold;" target="_blank">
+            GitHub
+          </a> 
+          for the latest news and features.
+        </i></p>
+      </div>
+    </section>
+    <hr>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h2><strong>Still Need Help? <img src="assets/cat.png" alt="support" style="width:1.5em; vertical-align:middle;"></strong></h2>
+      <br>
+      <p><i>Fill out the form below and our team will get back to you within 24 hours.</i></p><br>
+
+      <form class="support-form" id="contactForm">
+        <label for="name"><strong>Your Name </strong><img src="assets/sparkling_heart (1).png" alt="support" style="width:1.5em; vertical-align:middle;"></label>
+        <div class="input-wrapper">
+          <input type="text" id="name" name="name" placeholder="Enter your name ..." required>
+        </div>
+
+        <label for="email"><strong>Email </strong><img src="assets/email (1).png" alt="support" style="width:1.5em; vertical-align:middle;"></label>
+        <div class="email-wrapper">
+          <input type="email" id="email" name="email" placeholder="Enter your email ..." required>
+        </div>
+
+        <label for="message"><strong>Your Message </strong><img src="assets/speech_balloon (2).png" alt="support" style="width:1.5em; vertical-align:middle;"></label>
+        <div class="message-wrapper">
+          <textarea id="message" name="message" rows="5" placeholder="Describe your issue..." required></textarea>
+        </div>
+
+        <div class="submit-wrapper">
+          <button type="submit" class="primary">Send Message! <img src="assets/pizza.png" alt="support" style="width:1.5em; vertical-align:middle;"></button>
+        </div>
+      </form><br>
+      <p id="responseMsg" style="margin-top:15px; font-weight:bold;"></p>
+    </section>
+    <div id="loaderOverlay">
+      <div class="spinner"></div>
+    </div>
+  </main>
+<script src="script/admin-contact.js"></script>
+</body>
+</html>

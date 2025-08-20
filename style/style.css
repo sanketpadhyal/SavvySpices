@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  background: url("assets/bg.png") no-repeat center center/cover;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap');
+
+/* Frosted capsule for nav */
+.nav-ice {
+  display: flex;
+  align-items: center;
+  padding: 10px 18px;
+  gap: 18px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  flex-shrink: 0;
+}
+
+.nav-ice:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.24), inset 0 1px 0 rgba(255,255,255,0.35);
+}
+
+/* Layout inside nav */
+.nav-ice nav {
+  display: flex;
+  gap: 22px;
+  flex-shrink: 0;
+}
+
+/* Nav links */
+.nav-ice nav a {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.3px;
+  padding: 5px 0;
+  margin: 0 12px;
+  border-radius: 8px;
+  transition: color 0.3s ease;
+}
+
+.nav-ice nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ffffff, #ffffffb4, #ffffff4c);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-ice nav a:hover {
+  color: #ededed;
+}
+
+.nav-ice nav a:hover::after {
+  width: 100%;
+}
+
+/* Header Buttons */
+header .note-btn, header .sign-in {
+  margin-left: 20px;
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.25s ease;
+}
+
+header .note-btn:hover, header .sign-in:hover {
+  background: rgba(255,255,255,0.25);
+  transform: scale(1.05);
+}
+
+/* Hero */
+.hero {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  text-align: left;
+  max-width: 600px;
+}
+
+.hero-content {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  backdrop-filter: none;
+  border: none;
+  box-shadow: none;
+  animation: fadeUp 1s ease-out;
+}
+
+/* Cute Title */
+.cute-title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ffffff, #aba8a8, #5e5c5c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px; 
+}
+
+
+.cute-title .emoji {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+/* Paragraph with full-height yellow line */
+.cute-desc {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 12px 16px 12px 24px; 
+  border-radius: 10px;
+  position: relative;
+}
+
+.cute-desc::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to bottom, #1f01ff, #f90000); 
+  border-radius: 2px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.primary {
+  background: linear-gradient(90deg, #1a06f878, #7809ffc4, #5609fcb6);
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(36, 2, 255, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.primary:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 25px rgba(106, 0, 244, 0.364);
+}
+
+.primary:active {
+  transform: scale(0.96);
+}
+
+button.secondary {
+  background: transparent;
+  border: 2px solid white;
+  font-size: 1.1rem;
+  padding: 10px 22px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button.secondary:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Fade animation */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo */
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 14px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 111, 97, 0.3);
+}
+
+.chef-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+/* Hero slider */
+.hero-slider {
+  position: absolute;
+  top: -400px;
+  left: 700px;
+  width: 480px;
+  min-height: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  padding: 20px;
+  opacity: 0;
+  transform: scale(0.92);
+  transition: all 0.75s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 20;
+  pointer-events: none;
+}
+
+.hero-slider.open {
+  top: -8px;
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.hero-slider .option-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 12px 16px;
+  margin-bottom: 14px;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, background 0.25s ease;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+.hero-slider .option-box:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hero-slider .option-box img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.hero-slider .option-box p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  font-family: 'Nunito', sans-serif;
+}
+
+.close-btn {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  transition: background 0.2s ease, transform 0.2s ease;
+  font-family: 'Nunito', sans-serif;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+/* Loader overlay */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* Circle loader */
+.loader-circle {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Hide loader */
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+hr { 
+    border: none; 
+    height: 2px; 
+    background: linear-gradient(to right, transparent, #ffffff, transparent); 
+    margin: 20px 0; 
+}

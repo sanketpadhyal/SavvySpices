@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="assets/male-cook.png"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SavvySpices | Dashboard</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  background: url("assets/bg.png") no-repeat center center/cover;
+  min-height: 105vh;
+}
+</style>
+
+<body>
+
+  <header>
+    <div class="logo">
+  SavvySpices 
+  <img src="assets/male-cook.png" alt="Chef Icon" class="chef-icon">
+</div>
+    <div class="nav-ice">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="admin-contact.html">Contact</a>
+  </nav>
+</div>
+
+<button class="note-btn" id="noteBtn" aria-expanded="false"><strong><i>
+  NO LOGIN REQUIRED
+</button></strong></i>
+
+  </header>
+
+   <section class="hero">
+    <div class="hero-content">
+<h1 class="cute-title">
+  SavvySpices ...
+</h1><br><hr>
+<p class="cute-desc"><strong><i>
+<img src="assets/pizza.png" alt="" style="width:1.5em; vertical-align:middle;"> Welcome to SavvySpices <img src="assets/male-cook.png" alt="support" style="width:1.5em; vertical-align:middle;">, flavors dance, colors pop, and every dish has a story to tell. We stir in love, sprinkle a little magic, and savor the joy in every single bite. <img src="assets/cake.png" alt="support" style="width:1.5em; vertical-align:middle;"> <img src="assets/hamburger.png" alt="support" style="width:1.5em; vertical-align:middle;"></strong></i>
+</p>
+<p class="cute-desc">
+  Powered by <strong>OpenAI</strong> & <strong>API Network</strong> <img src="assets/signal_strength.png" alt="support" style="width:1.5em; vertical-align:middle;"><br>
+  Thanks for selecting us <img src="assets/sparkling_heart (1).png" alt="support" style="width:1.5em; vertical-align:middle;"> | <strong>No Login Needed | </strong><br> Made by 
+  <a href="https://github.com/sanketpadhyal" target="_blank" style="color:#7afcff; font-weight:bold; text-decoration:none;">
+   <i>SANKET PADHYAL</i> <img src="assets/support.png" alt="GitHub" style="width:1.5em; vertical-align:middle; margin-right:4px;">
+  </a>
+</p><hr>
+      <div class="buttons">
+        <button class="primary" id="tryNowBtn">Try Now! <img src="assets/point_right.png" alt="support" style="width:1.9em; vertical-align:middle;"></button>
+        <button class="secondary" onclick="window.location.href='admin.html'">
+  Admin Access! 
+  <img src="assets/male-student.png" alt="support" style="width:1.5em; vertical-align:middle;">
+</button>
+
+      </div>
+    </div>
+
+<!-- Slider -->
+<div class="hero-slider" id="heroSlider">
+  <button class="close-btn" id="closeHeroSlider">&times;</button>
+
+  <a href="ai-food.html" class="option-box">
+    <img src="assets/rice.png" alt="AI Food">
+    <p><strong><i>Cook Food With SavvySpices AI </i></strong></p>
+  </a>
+
+  <a href="special.html" class="option-box">
+    <img src="assets/male-cook.png" alt="Special">
+    <p><strong><i>SavvySpices Special</i></strong></p>
+  </a>
+</div>
+  </section>
+
+<script src="script/script.js"></script>
+
+<div id="loader">
+  <div class="loader-circle"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/key (1).png">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style/admin.css">
+</head>
+<style>
+    body { 
+    font-family: 'Segoe UI', Poppins, sans-serif; 
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: url("assets/bg.png") no-repeat center center/cover; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+<body>
+
+<div class="panel-container">
+  <h1><img src="assets/crown.png" alt="crown" 
+  style="width:1.5em; vertical-align:middle; position: relative; top: -10px;"> ADMIN PANEL<img src="assets/prince.png" alt="crown" 
+  style="width:1.5em; vertical-align:middle; position: relative; top: -10px;"></h1>
+
+  <a href="index.html" class="home-btn" style="margin-left:380px;">
+  Home <img src="assets/house (1).png" alt="house" style="width:1.5em; vertical-align:middle;">
+</a>
+  <div id="iceAlert" class="ice-alert"></div>
+  <hr>
+  <p class="note"><img src="assets/eyes (1).png" alt="eyes" style="width:1.5em; vertical-align:middle;"> <i>Access restricted: Only authorized admins can manage support messages.<br>Review And Solve The Problem!</i></p>
+
+  <!-- Login Form  -->
+  <div id="loginForm">
+    <input type="password" id="adminPass" placeholder="Enter admin password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- Messages Panel  -->
+  <div id="messagesPanel" style="display:none;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+     
+      <div style="display: flex; justify-content: center; margin-top: 12px; margin-left: 40%;">
+  <button class="logout-btn">
+    <img src="assets/key (1).png" alt="key" style="width:1.5em; vertical-align:middle;"> Log Out
+  </button>
+</div>
+
+    </div>
+    <hr>
+    <h2>USERS REPORTS! <img src="assets/speech_balloon (2).png" alt="speech" style="width:1.5em; vertical-align:middle;"></h2>
+    <table>
+      <thead>
+        <tr><th>Name</th><th>Email</th><th>Message</th><th>Date</th><th>Action</th></tr>
+      </thead>
+      <tbody id="messagesTable"></tbody>
+    </table>
+  </div>
+</div>
+
+<!--  Modal  -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <p id="modalText"></p>
+    <input type="password" id="confirmPass" placeholder="Re-enter admin password" style="color: #000;">
+    <br>
+    <button onclick="confirmDelete()">Confirm</button>
+    <button onclick="closeModal()">Cancel</button>
+  </div>
+</div>
+
+<script src="script/admin.js"></script>
+</body>
+</html>

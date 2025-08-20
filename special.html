@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="assets/spoon.png"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> SavvySpices Recipe Gallery</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/special.css">
+<style>
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Nunito', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    overflow-x: hidden;
+    background-image: url("assets/bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+</head>
+<body>
+
+<div id="loaderOverlay"><div class="spinner"></div></div>
+
+<header>
+  <a href="index.html" class="logo">
+    SavvySpices
+    <img src="assets/male-cook.png" alt="Chef Icon" class="chef-icon">
+  </a>
+</header>
+
+<!-- feature note -->
+<div class="feature-note">
+  <img src="assets/rice.png" alt="support" style="width:1.5em; vertical-align:middle;"> This feature allows you to select a dish according to your preference.<br><img src="assets/spoon.png" alt="support" style="width:1.5em; vertical-align:middle;">
+  Simply search the name of the selected dish in <strong><i>SavvySpices AI</i></strong> to access ingredients and enjoy cooking.<br>
+  <img src="assets/male-cook.png" alt="support" style="width:1.5em; vertical-align:middle;"> To return to the homepage, tap on the logo above.<br>
+ <strong>⇒ Currently as a <i>SMALL PROJECT </i>we have limited dishes fetching from PUBLIC API <img src="assets/shushing_face.png" alt="support" style="width:1.5em; vertical-align:middle;"></strong>
+</div>
+
+<div class="options">
+  <select id="mealType">
+    <option value="Vegetarian">Vegetarian</option>
+    <option value="Seafood">Seafood</option>
+    <option value="Chicken">Chicken</option>
+    <option value="Beef">Beef</option>
+    <option value="Pork">Pork</option>
+  </select>
+  <div class="button-group">
+    <button class="load-btn" onclick="loadRecipes()">Load Recipes</button>
+    <button class="refresh-btn" onclick="refreshRecipes()">Refresh</button>
+  </div>
+</div>
+
+<div class="results" id="results"></div>
+<script src="script/special.js"></script>
+</body>
+</html>
