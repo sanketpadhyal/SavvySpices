@@ -38,6 +38,17 @@ The **Admin Panel** is built for the website owner to manage user reports and fe
 
 ---
 
+## 🖼️ Background Image Usage
+We use a **custom background image (`bg.png`)** in this project:  
+
+![Background Preview](public/assets/bg.png)  
+
+⚡ **Performance Note:**  
+Always try to use **compressed or low-sized images** for backgrounds.  
+This ensures **faster loading times** and a **smoother user experience**, especially for larger recipe collections.  
+
+---
+
 ## 🛠️ Tech Stack
 
 **Frontend**
