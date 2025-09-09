@@ -22,6 +22,13 @@ The project also includes an **Admin Panel** for managing contact messages and f
 
 ---
 
+# 📢 ALERT: BACKEND IS NOW 24×7 ONLINE 
+
+✅ The **SavvySpices Backend** is now fully hosted on **Render**, which means the project is **available 24×7 without downtime**.  
+⚡ Your experience is smoother, faster, and always active! 
+
+---
+
 ## 🚀 Features  
 
 ### 1️⃣ SavvySpices AI  
