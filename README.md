@@ -46,7 +46,7 @@ The project also includes an **Admin Panel** for managing contact messages and f
 ### 3️⃣ Admin Panel  
 The **Admin Panel** is built for the website owner to manage user reports and feedback.  
 - All messages from the **Contact Form** (name, Gmail/email, message, and date-time) are saved in the backend inside `messages.json`.  
-- Secure login with password **123**.  
+- Secure login with password **Demo123**.  
 - Admin can:  
   - **View** all messages in a clean interface.  
   - **Delete** unwanted messages.  
